@@ -33,7 +33,7 @@ function Loginform({Login ,error}) {
                 />
             </div>
             <div className="login-form">
-            <input type="submit" value="LOGIN"/>
+            <input type="submit" value="LOG IN"/>
             </div>
             {/* </div> */}
 
