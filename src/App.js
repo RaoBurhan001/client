@@ -1,25 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import React ,{useState}from 'react';
 
-function App() {
+import Loginform from './component/Loginform';
+
+
+const App=()=> {
+ const admin ={
+   email: "Burhan@gmail.com",
+   password: "abcd"
+ }
+ const [user ,Setuser] = useState({email:"" , password:""});
+ const[error, Seterror] = useState("") ;
+
+ const Login = details =>{
+   if(details.email === admin.email  && details.password === admin.password)
+   {console.log("LOGGED IN");
+   alert("logged in");
+ }
+ if(details.email ===null || details.email !==admin.email)
+ {
+   Seterror("Please enter a valid email")
+ }
+ if(details.password ==="" || details.password !== admin.password)
+ {
+   Seterror("Please enter a valid password")
+ }
+ 
+ }
+
+
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      { <Loginform Login={Login} error={error}/> 
+    
+    }
     </div>
-  );
+    );
 }
 
 export default App;

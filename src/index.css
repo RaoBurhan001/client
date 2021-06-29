@@ -1,13 +1,91 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+body{
+  background:url('http://cdn.wallpapersafari.com/13/6/Mpsg2b.jpg');
+ margin: 0;
+ padding:0;
+ box-sizing: border-box;
+ font-family: montserrat , sans-serif;
+ 
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+  margin-right:5%;
+  margin-left: 60%;
+  margin-top:8% ;
+  max-width:500px;
+   /* position:static;  */
+   /* overflow: hidden; */
+   background-color: #f8f8f8;
+   border-radius: 5px;
+}
+.login-header {
+  color:rgb(17, 16, 16);
+  text-align:left;
+  font-size:150%;
+  margin-top:10px;
+  padding: 20px;
+
+  
+}
+.login-form {
+  box-sizing:border-box;
+  padding-top:0%;
+	padding-bottom:2%;
+  margin-right: 20px;
+  margin-left: 20px;
+  text-align:left;
+  font-size: 12px;
+}
+
+input[type=text] , input[type=email]    {
+  padding: 15px;
+  margin:10px 0;
+  border:0;
+  box-shadow:0 0 2px 2px rgba(0,0,0,0.06);
+  border-radius:20px;
+  width:90%;
+  
+
+}
+input[type=submit]{
+  padding: 15px;
+  margin:20px 10px;
+ margin-bottom: 70px;
+  border:0;
+  box-shadow:0 0 2px 2px  rgb(8, 156, 241);
+  border-radius:20px;
+  width:95%;
+  color:white;
+background: rgb(8, 156, 241);
+
+}
+.button {
+
+  /* remove default behavior */
+  appearance:none;
+  -webkit-appearance:none;
+
+  /* usual styles */
+  padding:10px;
+  border:none;
+  background-color:#3F51B5;
+  color:#fff;
+  font-weight:600;
+  border-radius:5px;
+  width:100%;
+  text-align: center;
+
+}
+
+
+
+/*Media Querie*/
+@media only screen and (min-width : 150px) and (max-width : 1300px){
+  
+  .login-button {
+    margin-bottom:10px;
+  } 
+  .container{
+  margin-left: 50%;
+  margin-top:8% ;
+}
 }
